@@ -1,31 +1,34 @@
 package com.applaudostudio.spaceship.entities;
 
 public class Item {
-    public String getmName() {
-        return mName;
+    private String mName;
+    private int mWeight;
+    private  boolean  mLoad;
+
+    public Item() {
+        this.mLoad =false;
     }
 
-    public void setmName(String mName) {
+    public void setLoad() {
+        this.mLoad = true;
+    }
+
+    public boolean isLoad() {
+        return mLoad;
+    }
+
+
+    public void setName(String mName) {
         this.mName = mName;
     }
 
-    public int getmWeight() {
+    int getWeight() {
         return mWeight;
     }
 
-    public void setmWeight(int mWeight) {
+    public void setWeight(int mWeight) {
         this.mWeight = mWeight;
     }
 
-    public Item(String mName, int mWeight) {
-        this.mName = mName;
-        this.mWeight = mWeight;
-    }
-
-    public Item() {
-    }
-
-    private String mName;
-    private int mWeight;
 
 }
