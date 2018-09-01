@@ -5,6 +5,9 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/***
+ * Class to manage a text file.
+ */
 public class TextFileReader {
     private String mFileName;
 
@@ -13,7 +16,7 @@ public class TextFileReader {
     }
 
     /***
-     * Return the whole file of movies
+     * Return the whole file of items
      * @return the complete file
      */
     private File getFileContent() {
@@ -21,7 +24,7 @@ public class TextFileReader {
     }
 
     /***
-     * Function to get the movies as a List
+     * Function to get a list of items as strings
      */
     public ArrayList<String> getItemsText() {
         ArrayList<String> movieList = new ArrayList<>();
