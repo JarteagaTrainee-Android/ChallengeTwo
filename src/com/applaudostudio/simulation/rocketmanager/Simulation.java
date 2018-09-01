@@ -5,6 +5,7 @@ import com.applaudostudio.spaceship.entities.Item;
 import com.applaudostudio.spaceship.specifications.U1;
 import com.applaudostudio.spaceship.specifications.U2;
 
+import java.math.BigDecimal;
 import java.util.*;
 
 public class Simulation {
@@ -180,10 +181,11 @@ public class Simulation {
                 case 3:
                     if (totalCostPh1 == 0 || totalCostPh2 == 0) {
                         System.out.println("Please complete the phase 1 and phase 2 for this kind of rocket");
+                    }else{
+                    System.out.println("Total cost of phase1: " + new BigDecimal(totalCostPh1).toPlainString());
+                    System.out.println("Total cost of phase2: " + new BigDecimal(totalCostPh2).toPlainString());
+                    System.out.println("You'll need $" +new BigDecimal(totalCostPh1 + totalCostPh2).toPlainString() + " To complete the mission");
                     }
-                    System.out.println("Total cost of phase1: " + totalCostPh1);
-                    System.out.println("Total cost of phase2: " + totalCostPh2);
-                    System.out.println("You'll need $" + (totalCostPh1 + totalCostPh2) + "To complete the mission");
                     break;
                 case 4:
                     backToMainMenu = true;
@@ -248,12 +250,12 @@ public class Simulation {
                     if (totalRocket1 == 0 || totalRocket2 == 0) {
                         System.out.println("You need to complete the 2 phases1 for both kind of rockets");
                     } else {
-                        System.out.println("Total money for U1 Rockets: " + totalRocket1);
-                        System.out.println("Total money for U2 Rockets: " + totalRocket2);
+                        System.out.println("Total money for U1 Rockets: " + new BigDecimal(totalRocket1).toPlainString());
+                        System.out.println("Total money for U2 Rockets: " + new BigDecimal(totalRocket2).toPlainString());
                         if (totalRocket1 > totalRocket2) {
-                            System.out.println("In this simulation is better to use rockets U2: " + totalRocket2);
+                            System.out.println("In this simulation is better to use rockets U2: " +  new BigDecimal(totalRocket2).toPlainString());
                         } else {
-                            System.out.println("In this simulation is better to use rockets U1: 1" + totalRocket1);
+                            System.out.println("In this simulation is better to use rockets U1: 1 " + new BigDecimal(totalRocket1).toPlainString());
                         }
                     }
                     break;
